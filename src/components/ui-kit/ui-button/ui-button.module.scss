@@ -1,0 +1,60 @@
+.uiButton {
+  all: unset;
+
+  cursor: pointer;
+  user-select: none;
+
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  width: max-content;
+  padding: 0 0.875rem;
+
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-semi-bold);
+  line-height: 34px;
+  white-space: nowrap;
+
+  border: 0.0625rem solid transparent;
+  border-radius: var(--radius-sm);
+
+  transition:
+    transform 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    color 0.15s ease-in-out;
+
+  &:active {
+    transform: translateY(2px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+.primary {
+  color: var(--color-white);
+  background-color: var(--color-btn-primary);
+
+  &:hover {
+    background-color: var(--color-btn-primary-hover);
+  }
+}
+
+.outline {
+  color: var(--color-btn-primary);
+  border-color: var(--color-btn-primary);
+
+  &:hover {
+    background-color: var(--color-btn-outline-hover);
+  }
+}
+
+.fullWidth {
+  width: 100%;
+}
