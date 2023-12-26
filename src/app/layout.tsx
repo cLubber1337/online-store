@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 
+import { Header } from '@/components/layouts/header/header'
 import { Poppins } from 'next/font/google'
 
 import '@/styles/main.scss'
@@ -14,7 +15,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang={'en'}>
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        <Header />
+        <main>{children}</main>
+      </body>
     </html>
   )
 }

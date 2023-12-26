@@ -26,10 +26,6 @@
   --shadow-xl: 0 0.0625rem 0.1875rem rgb(0 0 0 / 5%), rgb(0 0 0 / 5%) 0 2.25rem 1.75rem -0.4375rem,
     rgb(0 0 0 / 4%) 0 1.0625rem 1.0625rem -0.4375rem;
 
-  // breakpoints
-  --breakpoint-xs: 36em;
-  --breakpoint-sm: 48em;
-  --breakpoint-md: 62em;
-  --breakpoint-lg: 75em;
-  --breakpoint-xl: 88em;
+  // layout
+  --header-height: 72px;
 }

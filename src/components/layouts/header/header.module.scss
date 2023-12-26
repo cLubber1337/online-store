@@ -1,0 +1,24 @@
+@import '../../../styles/breakpoints';
+
+.header {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  height: var(--header-height);
+  min-height: var(--header-height);
+
+  background-color: var(--color-header-bg);
+}
+
+.inner {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (width <= $breakpoint-md) {
+    gap: 20px;
+  }
+}

@@ -1,0 +1,25 @@
+.search {
+  width: 100%;
+  line-height: 34px;
+}
+
+.input {
+  width: inherit;
+  padding-right: 14px;
+  padding-left: 36px;
+
+  background-image: url('../../assets/icons/search.svg');
+  background-repeat: no-repeat;
+  background-position: 7px center;
+  background-size: 22px;
+  border: 0.0625rem solid transparent;
+  border-radius: var(--radius-md);
+  outline: none;
+
+  transition: 0.15s ease-in-out outline-color;
+
+  &:focus {
+    outline: 2px solid var(--color-outline);
+    outline-offset: 2px;
+  }
+}
