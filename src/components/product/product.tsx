@@ -1,35 +1,41 @@
+import type { Product as ProductType } from '@/services/api/fetch-products'
+
+import { memo } from 'react'
+
+import { UiButton } from '@/components/ui-kit'
+import clsx from 'clsx'
 import Image from 'next/image'
 import { TbShoppingCartPlus } from 'react-icons/tb'
 import { TiStar } from 'react-icons/ti'
 
 import s from './product.module.scss'
 
-import { UiButton } from '../ui-kit'
-
 type ProductProps = {
   className?: string
+  product: ProductType
 }
 
-export const Product = ({ className }: ProductProps) => {
+export const Product = memo(({ className, product }: ProductProps) => {
+  const { description, price, rating, thumbnail, title } = product
+
   return (
-    <div className={s.product}>
+    <div className={clsx(s.product, className)}>
       <div className={s.imgWrapper}>
         <Image
-          alt={'iPhone 9'}
-          height={200}
+          alt={title}
+          height={193}
           priority
-          src={'https://i.dummyjson.com/data/products/12/thumbnail.jpg'}
-          width={200}
+          src={thumbnail}
+          style={{ height: 'auto', maxHeight: '193px', maxWidth: '100%' }}
+          width={193}
         />
       </div>
       <div className={s.info}>
-        <span className={s.price}>19,99 $</span>
-        <span className={s.title}>iPhone 9</span>
-        <span className={s.description}>
-          Infinix Inbook X1 Ci3 10th 8GB 256GB 14 Win10 Grey – 1 Year Warranty
-        </span>
+        <span className={s.price}>{price} $</span>
+        <span className={s.title}>{title}</span>
+        <span className={s.description}>{description}</span>
         <span className={s.rating}>
-          <TiStar className={s.starIcon} /> 5
+          <TiStar className={s.starIcon} /> {rating.toFixed(1)}
         </span>
       </div>
       <div className={s.actions}>
@@ -39,4 +45,4 @@ export const Product = ({ className }: ProductProps) => {
       </div>
     </div>
   )
-}
+})

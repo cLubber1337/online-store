@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 
 import { Header } from '@/components/layouts/header/header'
+import ReactQueryProvider from '@/utils/providers/react-query-provider'
 import { Poppins } from 'next/font/google'
 
 import '@/styles/main.scss'
@@ -17,7 +18,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang={'en'}>
       <body className={poppins.className}>
         <Header />
-        <main className={'main'}>{children}</main>
+        <main className={'main'}>
+          <ReactQueryProvider>{children}</ReactQueryProvider>
+        </main>
       </body>
     </html>
   )

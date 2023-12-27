@@ -1,6 +1,10 @@
 
 
 .sidebar {
+  position:sticky;
+  top: calc(var(--header-height) + 12px);
+  left:0;
+
   width: var(--sidebar-width);
   height: 89vh;
   padding: 20px;
