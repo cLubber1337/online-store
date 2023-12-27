@@ -1,14 +1,18 @@
 :root {
   // z-index
+  --z-index-header: 1000;
   --z-index-app: 100;
   --z-index-modal: 200;
   --z-index-popover: 300;
   --z-index-overlay: 400;
   --z-index-max: 9999;
+  --z-index-product-img-after: 1;
+  --z-index-product-img: 2;
+  --z-index-product: 3;
 
   // radius
   --radius-default: 0.25rem;
-  --radius-xs: 0.125rem;
+  --radius-xs: 0.125rem; 
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
   --radius-lg: 1rem;
@@ -28,4 +32,5 @@
 
   // layout
   --header-height: 72px;
+  --sidebar-width: 250px
 }

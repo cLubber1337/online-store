@@ -1,0 +1,16 @@
+.headerActions {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.cartIcon {
+  cursor: pointer;
+  width: 34px;
+  height: 34px;
+  color: var(--color-white);
+
+  &:hover {
+    color: var(--color-outline);
+  }
+}

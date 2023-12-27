@@ -1,4 +1,7 @@
-import { ComponentPropsWithRef, ReactNode } from 'react'
+import { ComponentPropsWithRef, ReactNode, use, useContext, useState, useTransition } from 'react'
+
+import { umask } from 'process'
+import { ucs2 } from 'punycode'
 
 import clsx from 'clsx'
 
@@ -8,7 +11,7 @@ type UiButtonProps = {
   children: ReactNode
   className?: string
   fullWidth?: boolean
-  variant?: 'outline' | 'primary'
+  variant?: 'clean' | 'outline' | 'primary'
 } & ComponentPropsWithRef<'button'>
 
 export const UiButton = ({

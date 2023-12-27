@@ -1,9 +1,12 @@
-import { Container } from '@/components/layouts'
+import { Container, ListingLayout } from '@/components/layouts'
+import { Products } from '@/components/layouts/products/products'
+import { Product } from '@/components/product/product'
+import { Sidebar } from '@/components/sidebar/sidebar'
 
 export default function Home() {
   return (
     <Container>
-      <h1>Main page</h1>
+      <ListingLayout left={<Sidebar />} right={<Products />} />
     </Container>
   )
 }
