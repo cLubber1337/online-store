@@ -6,7 +6,7 @@ import { useQuery } from '@tanstack/react-query'
 
 export const Products = () => {
   const { data } = useQuery({
-    queryFn: fetchProducts.getProducts,
+    queryFn: fetchProducts.getAllProducts,
     queryKey: ['products'],
   })
 

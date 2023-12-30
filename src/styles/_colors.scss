@@ -1,10 +1,13 @@
 :root {
   // colors
   --color-primary: #353535;
-  --color-secondary: #5c68ac;
+  --color-secondary: #475569;
+  --color-light-gray: #64748b;
   --color-white: #fff;
   --color-outline: #93c5fd;
   --color-star-rating: #f59e0b;
+  --color-logo-green: #068D41;
+
 
   // button primary
   --color-btn-primary: #5c68ac;
@@ -13,4 +16,5 @@
 
   // layout
   --color-header-bg: #172554;
+  --color-body-bg: hsl(0deg 0% 98%)
 }

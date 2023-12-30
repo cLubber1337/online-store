@@ -1,8 +1,5 @@
 import { ComponentPropsWithRef, ReactNode, use, useContext, useState, useTransition } from 'react'
 
-import { umask } from 'process'
-import { ucs2 } from 'punycode'
-
 import clsx from 'clsx'
 
 import s from './ui-button.module.scss'

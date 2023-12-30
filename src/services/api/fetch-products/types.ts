@@ -18,3 +18,5 @@ export type ProductsResponse = {
   skip: number
   total: number
 }
+
+export type AllProductsCategories = string[]

@@ -7,9 +7,22 @@
 
   width: var(--sidebar-width);
   height: 89vh;
-  padding: 20px;
+  padding: 6px;
 
+  background: linear-gradient(to right, var(--color-logo-green), var(--color-btn-primary)); 
   background-color: var(--color-white);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-default);
+}
+
+.inner {
+  overflow: auto;
+  height: 100%;
+  padding: 14px;
+  background-color: var(--color-body-bg)
+}
+
+.title {
+  padding-top: 12px;
+  color: var(--color-secondary);  
+  text-align: center;
 }
