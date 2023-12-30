@@ -1,7 +1,5 @@
 import type { AllProductsCategories, ProductsResponse } from './types'
 
-import { TRACE_OUTPUT_VERSION } from 'next/dist/shared/lib/constants'
-
 const baseUrl = 'https://dummyjson.com/products'
 
 export const fetchProducts = {
